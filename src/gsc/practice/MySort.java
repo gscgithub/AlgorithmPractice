@@ -19,7 +19,8 @@ public class MySort {
 		//twoWayInsertSort(arr);
 		//shellSort(arr);
 		//partition(arr,0,arr.length-1);
-		quickSort(arr);
+//		quickSort(arr);
+		insertSort2(arr);
 		
 		printIntArray(arr);
 	}
@@ -54,6 +55,22 @@ public class MySort {
 					break;
 			}
 			arr[j]=temp;
+		}
+	}
+	/**
+	 * 简单插入排序，换一种实现方式
+	 * @param array 需要排序的int数组
+	 */
+	public static void insertSort2 (int[] arr)
+	{
+		for(int i = 1; i <arr.length; i++) {
+			int temp = arr[i];
+			int j = i - 1;
+			while(j>=0 && arr[j]> temp) {
+				arr[j+1] = arr[j];
+				j--;
+			}
+			arr[j+1] = temp;
 		}
 	}
 	/**
