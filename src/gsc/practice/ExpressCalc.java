@@ -26,8 +26,8 @@ import java.util.Stack;
 //相关思考，二叉树，中缀表达式
 
 public class ExpressCalc {
-	private static Stack dataStack = new Stack();
-	private static Stack operaStack = new Stack();
+	private static Stack<Double> dataStack = new Stack<Double>();
+	private static Stack<Character> operaStack = new Stack<Character>();
 	/**
 	 * 给定字符串表达式，返回结果
 	 * 不做表达式正确的验证
@@ -167,6 +167,8 @@ public class ExpressCalc {
 	}
 }
 class InvalidExpressExceptin extends Exception {
+
+	private static final long serialVersionUID = 1L;
 
 	public InvalidExpressExceptin() {
 		super();
